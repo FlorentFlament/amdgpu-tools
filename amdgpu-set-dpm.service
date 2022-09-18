@@ -1,0 +1,10 @@
+[Unit]
+Description=amdgpu device power management tweaking
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/amdgpu-set-dpm.sh low
+
+[Install]
+WantedBy=default.target
